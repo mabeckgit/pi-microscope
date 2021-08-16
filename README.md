@@ -4,8 +4,8 @@ The pi-microscope is a hobby project of mine where I design and program a digita
 
 The bill of materials is not complete, yet, as the project is still under development. Indeed, I am currently using stepper motors salvaged from an old fax machine -- so not really off the shelf material. Once the design is polished I will list a full bill of materials here. Here is what I have used so far: 
 * [Raspberry Pi 4 Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
-* [2 Adafruit motor controller HATs] (https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi)
-* [A Pololu DRV8825 Stepper Motor Driver] (https://www.pololu.com/product/2133)
+* [2 Adafruit motor controller HATs](https://learn.adafruit.com/adafruit-dc-and-stepper-motor-hat-for-raspberry-pi)
+* [A Pololu DRV8825 Stepper Motor Driver](https://www.pololu.com/product/2133)
 * 3 stepper motors (salvaged from fax machine)
 * A short piece of LED-strip for illumination of the sample. Any couple of LEDs (say 6 bright ones) will do really. 
 
