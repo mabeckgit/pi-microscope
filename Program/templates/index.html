@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <title>Pi-croscope</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+  <!-- Sidebar -->
+  <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:12%">
+    <h3 class="w3-bar-item">Menu</h3>
+    <button type="button" onclick="testAJAX('up')"><img src="static/up.png" width="50px"></button>
+    <button type="button" onclick="testAJAX('down')"><img src="static/down.png" width="50px"></button></br>
+    <button type="button" onclick="testAJAX('left')"><img src="static/left.png" width="50px"></button>
+    <button type="button" onclick="testAJAX('right')"><img src="static/right.png" width="50px"></button></br>
+    <button type="button" onclick="testAJAX('plus')"><img src="static/plus.png" width="50px"></button>
+    <button type="button" onclick="testAJAX('minus')"><img src="static/minus.png" width="50px"></button></br>
+    <button type="button" onclick="testAJAX('brighten')"><img src="static/lightbulb.png" width="50px"></button>
+    <button type="button" onclick="testAJAX('dim')"><img src="static/lightbulb_off.png" width="50px"></button>
+  </div>
+
+  <!-- Page Content -->
+  <div style="margin-left:12%">
+
+  <div class="w3-container w3-teal">
+    <h1>Pi-croscope</h1>
+  </div>
+    <img src="{{ url_for('video_feed') }}" style="width:100%">
+
+  <script>
+  function testAJAX(pressed) {
+    const xhttp = new XMLHttpRequest();
+
+    xhttp.onload = function() {
+      console.log(this.responseText);
+    }
+    xhttp.open("POST", "{{ url_for('ajax') }}");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    data = "Button="+pressed
+    xhttp.send(data);
+  }
+  </script>
+
+  </body>
+</html>
